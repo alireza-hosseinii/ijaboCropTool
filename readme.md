@@ -251,7 +251,7 @@ CodeIgniter is a powerful PHP framework with a very small footprint, built for d
         $file = $this->request->getFile('file');
         $new_image_name = 'UIMG'.date('Ymd').uniqid().'.jpg';
 
-        if($file->move($path, $image_name)){
+        if($file->move($path, $new_image_name)){
             echo json_encode(['status'=>1, 'msg'=>'success', 'name'=>$new_image_name]); 
         }else{
             echo json_encode(['status'=>0, 'msg'=>'failed']);
